@@ -22,6 +22,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/mydata', mydataRouter);
 app.use('/users', usersRouter);
 
+// changes to the default route
+app.get('/', (req, res) => {
+  res.render('mydata', { title: 'Siddharth Madupathi' });
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
