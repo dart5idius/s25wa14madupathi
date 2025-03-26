@@ -24,7 +24,7 @@ app.use('/users', usersRouter);
 
 // changes to the default route
 app.get('/', (req, res) => {
-  res.render('mydata', { title: 'Siddharth Madupathi' });
+  res.render('/mydata', { title: 'Siddharth Madupathi' });
 });
 
 // catch 404 and forward to error handler
